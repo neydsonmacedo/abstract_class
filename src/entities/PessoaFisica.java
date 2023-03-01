@@ -23,21 +23,18 @@ public class PessoaFisica extends Contribuinte {
 	public double calculoImposto() {
 		double imposto = 0.0;
 		if (super.getRendaAnual() < 20000.00) {
-			if (gastosSaude > 0 ) {
-				imposto= (super.getRendaAnual() * 0.15) - (gastosSaude * 0.5);
-			}
-			else {
 				imposto = super.getRendaAnual() * 0.15;
-
-			}
-		}
+				}
+		
 		else {
-			if (gastosSaude > 0 ) {
-				imposto= (super.getRendaAnual() * 0.25) - (gastosSaude * 0.5);
-			}
-			else {
-				imposto = super.getRendaAnual() * 0.25;
-			}
+			imposto = super.getRendaAnual() * 0.25;
+
+		}
+		
+		imposto = imposto - (getGastosSaude()* 0.5);
+		
+		if (imposto < 0) {
+			imposto = 0;
 		}
 		return imposto;
 	}
