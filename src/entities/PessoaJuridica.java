@@ -29,14 +29,12 @@ public class PessoaJuridica extends Contribuinte {
 
 	@Override
 	public double calculoImposto() {
-		double imposto = 0.00;
 		if (numeroFuncionarios > 10) {
-			imposto = super.getRendaAnual()*0.14;
+			return super.getRendaAnual()*0.14;
 		}
 		else {
-			imposto = super.getRendaAnual()*0.16; 
+			return super.getRendaAnual()*0.16; 
 		}
-		return imposto;
 		
 	}
 
