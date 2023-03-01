@@ -1,14 +1,14 @@
 package entities;
 
-public abstract class Contribuente {
+public abstract class Contribuinte {
 	String nome;
 	Double rendaAnual;
 	
-	public Contribuente() {
+	public Contribuinte() {
 		
 	}
 	
-	public Contribuente(String nome, Double rendaAnual) {
+	public Contribuinte(String nome, Double rendaAnual) {
 		this.nome = nome;
 		this.rendaAnual = rendaAnual;
 	}
